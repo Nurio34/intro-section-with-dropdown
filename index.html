@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor</title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+
+        <header class="header">
+
+            <img class="header__logo" src="images/logo.svg" alt="logo image">
+
+            <nav class="header__nav" id="nav">
+                <div class="list">
+                    <img class="close--menu" id="close--menu" onclick="func2()" src="images/icon-close-menu.svg" alt="menu closing icon">
+                    <ul>
+                        <li class="dropdowns dropdown__1" onclick="func3()">Features
+                            <picture>
+                                <img class="arrow--down" id="arrow--down_1" src="images/icon-arrow-down.svg" alt="arrow down icon">
+                                <img class="arrow--up" id="arrow--up_1" src="images/icon-arrow-up.svg" alt="arrow up icon">
+                            </picture>
+                            <ul class="dropdown" id="dropdown__1">
+                                <li>Todo List</li>
+                                <li>Calender</li>
+                                <li>Reminders</li>
+                                <li>Planning</li>
+                            </ul>
+                        </li>
+                        <li class="dropdowns dropdown__2" onclick="func4()">Company
+                            <picture>
+                                <img class="arrow--down" id="arrow--down_2" src="images/icon-arrow-down.svg" alt="arrow down icon">
+                                <img class="arrow--up" id="arrow--up_2" src="images/icon-arrow-up.svg" alt="arrow up icon">
+                            </picture>
+                            <ul class="dropdown" id="dropdown__2">
+                                <li>History</li>
+                                <li>Our Team</li>
+                                <li>Blog</li>
+                            </ul>
+                        </li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <img class="header__open--menu" id="open-menu" onclick="func()" src="images/icon-menu.svg" alt="menu icon">
+            
+        </header>
+
+        <picture class="showcase--picture">
+            <source media="(min-width:900px )" srcset="images/image-hero-desktop.png">
+            <img src="images/image-hero-mobile.png" alt="">
+        </picture>
+
+
+        <section class="showcase">
+            <h1 class="showcase__header"><span>Make</span> remote work</h1>
+            <p class="showcase__content">Get your team in sync, no matter your location. Streamline processes, reate team rituals, and watch productivity soar.</p>
+            <a type="link" href="#">Learn More</a>
+        </section>
+
+        <footer>
+            <img src="images/client-databiz.svg" alt="">
+            <img src="images/client-audiophile.svg" alt="">
+            <img src="images/client-meet.svg" alt="">
+            <img src="images/client-maker.svg" alt="">
+        </footer>
+    </main>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+    </div> 
+
+    <script>
+        function func(){
+            document.getElementById("nav").
+            style=" transform:translate(0); opacity:1";
+
+            document.getElementById("open-menu").style="display:none"
+        }
+        function func2(){
+            document.getElementById("nav").
+            style=" transform:translate(100%); opacity:0";
+
+            document.getElementById("open-menu").
+            style=" display:block"
+        }
+        function func3(){
+            document.getElementById("arrow--down_1").
+            style="display:none";
+            document.getElementById("arrow--up_1").
+            style="display:inline-block";
+
+            document.getElementById("dropdown__1").style="display:block; height:176px";
+            document.getElementById("dropdown__2").style="display:none; height:176px";
+
+            document.getElementById("arrow--down_2").
+            style="display:inline-block";
+            document.getElementById("arrow--up_2").
+            style="display:none";
+        }
+        function func4(){
+            document.getElementById("arrow--down_2").
+            style="display:none";
+            document.getElementById("arrow--up_2").
+            style="display:inline-block";
+
+            document.getElementById("dropdown__2").style="display:block; height:136px";
+            document.getElementById("dropdown__1").style="display:none; height:136px";
+
+            document.getElementById("arrow--down_1").
+            style="display:nline-block";
+            document.getElementById("arrow--up_1").
+            style="display:none";
+
+        }
+    </script>
+</body>
+
+</html>
